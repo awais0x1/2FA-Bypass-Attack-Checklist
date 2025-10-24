@@ -18,11 +18,8 @@ This checklist compiles **practical attack vectors** and **testing approaches** 
 ## 📚 References & Inspirations
 
 - [OWASP MFA/2FA Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
-- Bug bounty write-ups on 2FA bypass:
-  - “How I Cracked 2FA with Simple Brute Force”
-  - “Bypassing 2FA via IDOR in Recovery Flow”
-  - “2FA Race Condition Exploit”
-  - “2FA Brute Force on OTP Verification API”
+-  [Awesome Bug Bounty Writeups – 2FA-Related Issues](https://github.com/devanshbatham/Awesome-Bugbounty-Writeups#2fa-related-issues)  
+- [HackerOne Reports – MFA / 2FA Issues (TOPMFA list)](https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPMFA.md)
 
 ---
 
@@ -36,8 +33,6 @@ Feel free to contribute!
 3. Submit a Pull Request 💡  
 
 ---
-
-## 🧠 Maintainer
 
 **👤 Awais**  
 Security Researcher | Full-time Bug Bounty Hunter  
