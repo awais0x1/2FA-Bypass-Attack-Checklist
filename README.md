@@ -15,34 +15,6 @@ This checklist compiles **practical attack vectors** and **testing approaches** 
 
 ---
 
-## 🚀 Common 2FA Bypasses (Test on Every Website)
-
-| # | Technique | Description | Impact |
-|:-:|------------|--------------|---------|
-| 1️⃣ | **Missing 2FA Enforcement** | After login, sensitive actions (password change, profile edit, etc.) don’t require OTP revalidation. | Account takeover without OTP |
-| 2️⃣ | **Bypass via Alternate Endpoint** | OTP validation occurs only on frontend routes — backend APIs accept requests without OTP. | Full bypass of 2FA protection |
-| 3️⃣ | **No Rate Limiting on OTP Attempts** | Allows brute-force on 4-6 digit OTP codes via automated tools (Burp Intruder, etc.) | OTP brute-force and unauthorized login |
-| 4️⃣ | **Replay Old OTP** | OTP remains valid after successful verification or for an extended duration. | Reuse of OTP → login bypass |
-| 5️⃣ | **Change 2FA Settings Without OTP** | Users can reset/change 2FA secret, phone number, or backup codes without verifying old OTP. | 2FA reset → account takeover |
-| 6️⃣ | **IDOR in 2FA Recovery Flow** | Attacker can trigger OTP delivery to another user’s number/email by modifying user ID parameters. | Hijack victim OTP → unauthorized login |
-| 7️⃣ | **Race Condition on OTP Verification** | Multiple concurrent OTP requests processed incorrectly, allowing bypass or desync. | OTP validation bypass |
-| 8️⃣ | **Backup Code Misuse** | Backup codes not properly invalidated or generated without proper validation. | Persistent access without OTP |
-| 9️⃣ | **Cross-Account 2FA Mapping** | OTP or recovery code mapped to wrong identifier (email instead of user ID). | Access to another user’s 2FA token |
-| 🔟 | **Weak OTP Format** | Predictable OTPs (e.g., sequential, timestamp-based, or short validity window). | OTP guessing or timing attack |
-
----
-
-## 🧩 Impact Summary
-
-| Impact | Description |
-|--------|--------------|
-| 🔓 **Account Takeover** | Full access to victim’s account without OTP verification |
-| 💣 **2FA Mechanism Broken** | Defeats purpose of MFA; weakens authentication system |
-| 🕵️ **Cross-Account OTP Delivery** | OTP or recovery code sent to attacker’s controlled device |
-| ⚙️ **2FA Reset Abuse** | Attackers reset 2FA and take control of user session |
-
----
-
 ## 📚 References & Inspirations
 
 - [OWASP MFA/2FA Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
@@ -70,7 +42,6 @@ Feel free to contribute!
 **👤 Awais**  
 Security Researcher | Full-time Bug Bounty Hunter  
 📫 Twitter / X: [@AwaisSec](#)  
-🌐 Website: *coming soon...*
 
 ---
 
